@@ -16,13 +16,20 @@
   # https://devenv.sh/scripts/
   scripts.hello.exec = "echo hello from $GREET";
 
-  enterShell = ''
-    hello
-    git --version
-    export CHROME_EXECUTABLE=$(which chromium)
+enterShell = ''
+  hello
+  git --version
+  export CHROME_EXECUTABLE=$(which chromium)
+  export ANDROID_HOME=/nix/store/1vilh66mdigmxh6csyprnvldi9c0h45c-androidsdk/libexec/android-sdk
+  export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$PATH
 
+  # Create a symbolic link to the '8.0' directory named 'latest' if it doesn't exist
+  # I added this link in to stop `flutter doctor` complaining - not that it matters really
+  if [ ! -d "$ANDROID_HOME/cmdline-tools/latest" ]; then
+    ln -s $ANDROID_HOME/cmdline-tools/8.0 $ANDROID_HOME/cmdline-tools/latest
+  fi
+'';
 
-  '';
 
   # https://devenv.sh/tests/
   enterTest = ''

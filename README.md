@@ -1,5 +1,9 @@
 # Flutter environment build using devenv.sh
 
+Thanks to the amazing work from the [devenv.sh](https://devenv.sh/integrations/android/#emulators) team (thanks Domen!) it is now easy to get a good working flutter environment up in NixOS.
+
+With devenv being usable for other OSes (once nix is installed) it could be a low friction approach for other OSes to use to (untested).
+
 This environment provides a working environment that will give you the following result from flutter doctor (as per the current date of writing this [Jul 2024]).
 
 I tested this from NixOS - but it should work from nix with devenv on other OSes as well.
