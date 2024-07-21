@@ -104,6 +104,5 @@ Android toolchain installed, you're in a good position for Flutter development. 
 5.  Recommended additional tools:
     
     -   VS Code with Flutter and Dart extensions
-    -   A standalone Android emulator (if not already installed)
 
 This environment is perfect for a more lightweight development environment. Just ensure you keep your toolchain updated regularly to maintain compatibility with the latest Flutter versions.
