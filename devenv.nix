@@ -20,7 +20,6 @@ enterShell = ''
   hello
   git --version
   export CHROME_EXECUTABLE=$(which chromium)
-  # export ANDROID_HOME=/nix/store/1vilh66mdigmxh6csyprnvldi9c0h45c-androidsdk/libexec/android-sdk
   export ANDROID_HOME=$(which android | sed -E 's/(.*libexec\/android-sdk).*/\1/')
   export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$PATH
 
