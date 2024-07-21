@@ -9,7 +9,7 @@
 
   # https://devenv.sh/basics/
   env.GREET = "devenv";
-  
+
   # https://devenv.sh/packages/
   packages = [ pkgs.git pkgs.chromium];
 
@@ -25,9 +25,10 @@ enterShell = ''
 
   # Create a symbolic link to the '8.0' directory named 'latest' if it doesn't exist
   # I added this link in to stop `flutter doctor` complaining - not that it matters really
-  if [ ! -d "$ANDROID_HOME/cmdline-tools/latest" ]; then
-    ln -s $ANDROID_HOME/cmdline-tools/8.0 $ANDROID_HOME/cmdline-tools/latest
-  fi
+  # It doesn't seem to be required currently - so I commented it out
+  #  if [ ! -d "$ANDROID_HOME/cmdline-tools/latest" ]; then
+  #    ln -s $ANDROID_HOME/cmdline-tools/8.0 $ANDROID_HOME/cmdline-tools/latest
+  #  fi
 '';
 
 
