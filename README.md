@@ -4,28 +4,28 @@ Thanks to the amazing work from the [devenv.sh](https://devenv.sh/integrations/a
 
 With devenv being usable for other OSes (once nix is installed) it could be a low friction approach for other OSes to use to (untested).
 
-This environment provides a working environment that will give you the following result from flutter doctor (as per the current date of writing this [Jul 2024]).
+This environment provides a working light flutter environment that will give you the following result from flutter doctor (as per the current date of writing this [Jul 2024]). What makes the environment light is that it is not using the full Android SDK - but it does have the cmdline-tools etc. for builds and emulators etc.
 
 I tested this from NixOS - but it should work from nix with devenv on other OSes as well.
 
 ```bash
-➜  flutter flutter doctor
-Doctor summary (to see all details, run
-flutter doctor -v):
-[✓] Flutter (Channel stable, 3.19.0, on
-    NixOS 24.11 (Vicuna) 6.6.39, locale
+➜  flutter git:(main) ✗ flutter doctor   
+Doctor summary (to see all details, run flutter doctor -v):
+[✓] Flutter (Channel stable, 3.19.0, on NixOS 24.11 (Vicuna) 6.6.41, locale
     en_NZ.UTF-8)
-[✓] Android toolchain - develop for
-    Android devices (Android SDK version
+[✓] Android toolchain - develop for Android devices (Android SDK version
     33.0.2)
 [✓] Chrome - develop for the web
-[✓] Linux toolchain - develop for Linux
-    desktop
+[✓] Linux toolchain - develop for Linux desktop
 [!] Android Studio (not installed)
 [✓] Connected device (2 available)
 [✓] Network resources
 
+! Doctor found issues in 1 category.
+
 ```
+
+For the `flutter doctor -v` output [I captured it here for review](./flutter-doctor-output.md)
 
 For further notes refer to the [devenv.sh](https://devenv.sh/integrations/android/#emulators) and [flutter documentation](https://docs.flutter.dev/)
 
@@ -69,3 +69,30 @@ Open VS Code:
 1. Run the App with F5 in debugging:
 
 If everything is set up correctly, your app should launch in the emulator, and you should see a screen with your changes
+
+## What this envionment gives you
+
+Android toolchain installed, you're in a good position for Flutter development. Here's a breakdown of what this means:
+
+Toolchain components:
+    - Android SDK
+    - Android SDK Command-line Tools
+    - Platform-tools
+    - Build-tools
+Benefits of your setup:
+    - Lighter weight than full Android Studio
+    - Sufficient for most Flutter development tasks
+    - Allows command-line operations for Android-related tasks
+What you can do:
+    - Develop Flutter apps
+    - Build Android APKs
+    - Use Android emulators (if installed separately)
+    - Perform Android debugging via command line
+Potential limitations:
+    - No graphical interface for Android SDK management
+    - Manual updates of Android SDK components
+    - Lack of integrated Android-specific IDE features
+Recommended additional tools:
+    - VS Code with Flutter and Dart extensions
+
+This environment is perfect for a more lightweight development environment. Just ensure you keep your toolchain updated regularly to maintain compatibility with the latest Flutter versions.
