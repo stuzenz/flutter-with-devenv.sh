@@ -2,7 +2,7 @@
 
 Thanks to the amazing work from the [devenv.sh](https://devenv.sh/integrations/android/#emulators) team (thanks Domen!) it is now easy to get a good working flutter environment up in NixOS.
 
-With devenv being usable for other OSes (once nix is installed) it could be a low friction approach for other OSes to use to (untested).
+With devenv being usable for other OSes (once nix is installed) it could be a low friction approach for other OSes to use too (untested by me).
 
 This environment provides a working light flutter environment that will give you the following result from flutter doctor (as per the current date of writing this [Jul 2024]). What makes the environment light is that it is not using the full Android SDK - but it does have the cmdline-tools etc. for builds and emulators etc.
 
