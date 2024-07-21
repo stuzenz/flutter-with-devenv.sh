@@ -106,3 +106,19 @@ Android toolchain installed, you're in a good position for Flutter development. 
     -   VS Code with Flutter and Dart extensions
 
 This environment is perfect for a more lightweight development environment. Just ensure you keep your toolchain updated regularly to maintain compatibility with the latest Flutter versions.
+
+## Eye candy
+
+### Android dev environment
+
+<img src="./images/android.png" alt="android image" width="800">
+
+
+### Web dev environment
+
+<img src="./images/web.png" alt="web image" width="800">
+
+
+### Linux dev environment
+
+<img src="./images/linux.png" alt="linux image" width="800">
